@@ -1,0 +1,21 @@
+# ninja log v5
+455	1080	7037383417669758	sfml_project.exe	eed2fe75c717d7f1
+8	808	7237259724902731	CMakeFiles/analog_digital_clock.dir/Galaga.cpp.obj	921b8a24780e6d3e
+3	801	7237259724837497	CMakeFiles/analog_digital_clock.dir/main.cpp.obj	81a70dcda52851e7
+3	600	7237240589817331	CMakeFiles/analog_digital_clock.dir/Alien.cpp.obj	e1133796d6fe7fcb
+810	2134	7237653618336188	analog_digital_clock.exe	19d157f7f9dc2e67
+3	691	7237126424439526	CMakeFiles/analog_digital_clock.dir/Image.cpp.obj	9c538aba27249997
+7	1003	7237175380991333	CMakeFiles/analog_digital_clock.dir/Position.cpp.obj	2067f1dc510e01d9
+8	809	7237653605208495	CMakeFiles/analog_digital_clock.dir/Background.cpp.obj	163e5f2ef32e2e04
+13	1502	7224657513698786	CMakeFiles/analog_digital_clock.dir/Font.cpp.obj	97dbec2a62be6954
+8	1183	7237187552007045	CMakeFiles/analog_digital_clock.dir/States.cpp.obj	838fd9e95d290e3b
+1	285	7237804879549235	build.ninja	76f06e92bb5e8786
+28	992	7237187549926201	CMakeFiles/analog_digital_clock.dir/FighterJet.cpp.obj	56f17ac1c6507cc6
+23	1071	7237187550703896	CMakeFiles/analog_digital_clock.dir/Rocket.cpp.obj	c3a639621439d431
+3	681	7237238497399894	CMakeFiles/analog_digital_clock.dir/Gun.cpp.obj	be791199622952a2
+33	794	7236741611233466	CMakeFiles/analog_digital_clock.dir/HitBox.cpp.obj	f0e974fd2eed7cd6
+51	1339	7237187553580983	CMakeFiles/analog_digital_clock.dir/AlienShip.cpp.obj	3ae3be9e54b23fe8
+993	1897	7237187559168328	CMakeFiles/analog_digital_clock.dir/Display.cpp.obj	98bab9784b09b113
+61	1165	7237187550779130	CMakeFiles/analog_digital_clock.dir/AnimatedSprite.cpp.obj	640d2ef47674d451
+3	495	7237260320100015	CMakeFiles/analog_digital_clock.dir/GameOver.cpp.obj	4ebf794860ec7735
+15	773	7237259724543161	CMakeFiles/analog_digital_clock.dir/Button.cpp.obj	d0013be8cd89bd37

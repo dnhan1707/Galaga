@@ -70,5 +70,12 @@ void GameOver::setPosition(sf::RectangleShape& background)
     Position::alignCenter(background, button.getButton(), 0, 50);
 }
 
+void GameOver::eventHandler(sf::RenderWindow &window) {
+    if (MouseEvents::isCLicked(button.getButton(), window))
+    {
+        enableState(RESTART);
+    }
+}
+
 
 

@@ -32,7 +32,6 @@ void Galaga::draw(sf::RenderTarget &window, sf::RenderStates states) const
 {
 
     if (fighterJet.getState(HIT))
-
     {
         window.draw(gameOver);
     }
@@ -74,6 +73,10 @@ void Galaga::update(sf::RenderWindow &window, sf::Event event)
         display.update();
     }
 
+//    else
+//    {
+//        gameOver.eventHandler(window);
+//    }
 }
 
 void Galaga::eventHandler(sf::RenderWindow &window, sf::Event event)

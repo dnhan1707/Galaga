@@ -16,7 +16,7 @@ int main()
             if (sf::Event::Closed == event.type) {
                 window.close();
             }
-//            galaga.eventHandler(window, event);
+            galaga.eventHandler(window, event);
         }
         galaga.update(window, event);
         window.clear();

@@ -20,6 +20,7 @@ void AnimatedSprite::setup(sf::Texture &texture, int rows, int cols) {
     height = texture.getSize().y;
     setTexture(texture);
     setupIntRect(rows, cols);
+    
 }
 
 
@@ -38,8 +39,9 @@ void AnimatedSprite::draw(sf::RenderTarget &target, sf::RenderStates states) con
     target.draw(s);
 }
 
-void AnimatedSprite::animate()
+void AnimatedSprite::animate(sf::Vector2f position)
 {
+
     if (clock.getElapsedTime().asMilliseconds() > 100)
     {
         if (intRect.left + intRect.width >= width)

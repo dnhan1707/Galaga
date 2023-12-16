@@ -3,7 +3,7 @@
 //
 
 #include "FighterJet.h"
-
+#include "AnimatedSprite.h"
 
 FighterJet::FighterJet()
 : FighterJet(Image::getImageFighterJet())
@@ -36,4 +36,8 @@ void FighterJet::move(sf::Vector2f velocity)
 
 sf::Sprite &FighterJet::getSprite() {
     return sprite;
+}
+
+sf::Vector2f FighterJet::getPosition() {
+    return sprite.getPosition();
 }

@@ -22,6 +22,8 @@ public:
 
     sf::Sprite& getSprite();
     void move(sf::Vector2f velocity);
+
+    sf::Vector2f getPosition();
 };
 
 

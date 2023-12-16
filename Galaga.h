@@ -15,7 +15,7 @@
 #include "AlienShip.h"
 #include "HitBox.h"
 #include "Display.h"
-
+#include "AnimatedSprite.h"
 #include "GameOver.h"
 
 class Galaga : public sf::Drawable, public States
@@ -30,6 +30,8 @@ private:
     AlienShip alienShip;
     Gun gun;
     GameOver gameOver;
+
+    AnimatedSprite animatedSprite;
 
     bool isOver = false;
 public:

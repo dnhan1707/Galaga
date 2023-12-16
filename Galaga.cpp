@@ -33,7 +33,11 @@ void Galaga::draw(sf::RenderTarget &window, sf::RenderStates states) const
 
     if (fighterJet.getState(HIT))
     {
-        window.draw(gameOver);
+        window.draw(background);
+        window.draw(alienShip);
+        window.draw(gun);
+        window.draw(display);
+        window.draw(animatedSprite);
     }
     else
     {
@@ -72,11 +76,11 @@ void Galaga::update(sf::RenderWindow &window, sf::Event event)
         gun.shoot(fighterJet, background, alienShip);
         display.update();
     }
-
-//    else
-//    {
-//        gameOver.eventHandler(window);
-//    }
+    else
+    {
+        animatedSprite.animate();
+        std::cout << "here\n";
+    }
 }
 
 void Galaga::eventHandler(sf::RenderWindow &window, sf::Event event)

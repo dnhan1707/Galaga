@@ -22,7 +22,7 @@ public:
     AnimatedSprite();
     AnimatedSprite(sf::Texture &texture, int rows, int cols);
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
-    void animate();
+    void animate(sf::Vector2f position);
     void reset();
 
     void setupIntRect(int rows, int cols);

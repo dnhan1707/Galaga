@@ -6,38 +6,98 @@
 #include "AnimatedSprite.h"
 
 FighterJet::FighterJet()
-: FighterJet(Image::getImageFighterJet())
+: FighterJet(Image::getImageFighterJet(), Image::getImageExplosion())
 {
-
 }
 
-FighterJet::FighterJet(sf::Texture &image) {
-    sf::IntRect intRect;
-
-    intRect.width = image.getSize().x;
-    intRect.height = image.getSize().y;
-
-    sprite.setTexture(image);
-    sprite.setTextureRect(intRect);
-
-    sprite.setScale(0.1, 0.1);
+FighterJet::FighterJet(sf::Texture& jetImage, sf::Texture& explosionImage)
+{
+    setupJet(jetImage, 1, 1);
+    setup(explosionImage, 6, 8);
 
 }
 
 void FighterJet::draw(sf::RenderTarget &window, sf::RenderStates states) const
 {
-    window.draw(sprite);
+
+    if (getState(HIT))
+    {
+        window.draw(explosionSprite);
+    }
+    else
+        window.draw(jetSprite);
+
 }
 
 void FighterJet::move(sf::Vector2f velocity)
 {
-    sprite.move(velocity);
+    jetSprite.move(velocity);
+    explosionSprite.move(velocity);
 }
 
-sf::Sprite &FighterJet::getSprite() {
-    return sprite;
+sf::Sprite &FighterJet::getJetSprite(){
+    return jetSprite;
 }
 
-sf::Vector2f FighterJet::getPosition() {
-    return sprite.getPosition();
+sf::Sprite &FighterJet::getExplosionSprite()
+{
+    return explosionSprite;
 }
+
+void FighterJet::animateExplosion()
+{
+    if (clock.getElapsedTime().asMilliseconds() > 100)
+    {
+        if (explosionIntRect.left + explosionIntRect.width >= width)
+        {
+            explosionIntRect.left = 0;
+            explosionIntRect.top += explosionIntRect.height;
+            if (explosionIntRect.top + explosionIntRect.height >= height)
+            {
+                explosionIntRect.top = 0;
+            }
+        }
+        else
+        {
+            explosionIntRect.left += explosionIntRect.width;
+        }
+        clock.restart();
+
+        // Use the explosion sprite's setTextureRect instead of FighterJet's setTextureRect
+        explosionSprite.setTextureRect(explosionIntRect);
+    }
+}
+
+void FighterJet::setup(sf::Texture &texture, int rows, int cols)
+{
+    width = texture.getSize().x;
+    height = texture.getSize().y;
+    explosionSprite.setTexture(texture);
+    setupExplosionIntRect(rows, cols);
+}
+
+void FighterJet::setupExplosionIntRect(int rows, int cols)
+{
+    explosionIntRect.width = width / cols;
+    explosionIntRect.height = height / rows;
+
+    explosionIntRect.left = 0;
+    explosionIntRect.top = 0;
+    explosionSprite.setTextureRect(explosionIntRect);
+}
+
+
+void FighterJet::setupJet(sf::Texture &texture, int rows, int cols)
+{
+    sf::IntRect intRect;
+
+    intRect.width = texture.getSize().x;
+    intRect.height = texture.getSize().y;
+
+    jetSprite.setTexture(texture);
+    jetSprite.setTextureRect(intRect);
+
+    jetSprite.setScale(0.1, 0.1);
+
+}
+

@@ -18,10 +18,16 @@ class Alien : public sf::Drawable, public States
 {
 private:
     sf::Sprite sprite;
-    AnimatedSprite explosionSprite;  // Add AnimatedSprite for explosion
-    bool isExploding = false;        // Flag to track if explosion is happening
+    sf::Sprite explosionSprite;
+
+    sf::Clock clock;
+    unsigned int width, height;
+    sf::IntRect explosionIntRect;
+
     float start_x, start_y;
     bool firstMove = true;
+
+    void setup(sf::Texture &texture, int rows, int cols);
 
 public:
     Alien();
@@ -35,20 +41,11 @@ public:
     void setRandPosition();
 
     void bounce();
-    void onHit();  // Method to trigger explosion
+    sf::Sprite &getExplosionSprite();
 
-    // Update method to handle explosion animation
-    void update();
-
-
-    // Function to start the explosion animation
-    void updateExplosionAnimation();
-
-    // Function to check if the explosion animation is complete
-    bool isExplosionComplete();
-
-    // Function to reset the alien to its initial state
-    void reset();
+    void setupExplosionIntRect(int rows, int cols);
+    void setupAlien(sf::Texture &texture, int rows, int cols);
+    void animateExplosion();
 };
 
 #endif //SFML_PROJECT_ALIEN_H

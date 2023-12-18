@@ -7,26 +7,20 @@
 Alien::Alien()
 : Alien(Image::getImageAlienShip(), Image::getImageExplosion())  // Initialize with alien and explosion textures
 {
-    // ...
+
 }
 
 
 Alien::Alien(sf::Texture& alienTexture, sf::Texture& explosionTexture)
-: explosionSprite(explosionTexture, 6, 8)  // Initialize explosion sprite
 {
-    sf::IntRect intRect;
 
-    intRect.width = alienTexture.getSize().x;
-    intRect.height = alienTexture.getSize().y;
+    setup(explosionTexture, 6, 8);
+    setupAlien(alienTexture, 1 , 1);
 
-    sprite.setTexture(alienTexture);
-    sprite.setTextureRect(intRect);
-
-    sprite.setScale(0.009, 0.009);
 }
 
 void Alien::draw(sf::RenderTarget &window, sf::RenderStates states) const {
-    if (isExploding) {
+    if (getState(HIT)) {
         window.draw(explosionSprite);
     } else {
         window.draw(sprite);
@@ -39,14 +33,23 @@ sf::Sprite & Alien::getSprite()
     return sprite;
 }
 
+sf::Sprite & Alien::getExplosionSprite()
+{
+    return explosionSprite;
+}
+
 
 void Alien::move(sf::Vector2f velocity)
 {
+
     sprite.move(velocity);
+    explosionSprite.move(velocity);
 }
 
 void Alien::setPosition(sf::Vector2f position) {
     sprite.setPosition(position);
+    explosionSprite.setPosition(position);
+
 }
 
 void Alien::setRandPosition()
@@ -55,6 +58,7 @@ void Alien::setRandPosition()
     int rand_x = rand() % (830 - 166 + 1) + 166;
     int rand_y = rand() % (300 - 133 + 1) + 133;
     sprite.setPosition(rand_x,rand_y);
+    explosionSprite.setPosition(rand_x, rand_y);
 
 }
 
@@ -83,42 +87,57 @@ void Alien::bounce()
     }
 
     move({start_x, start_y});
+
 }
 
-void Alien::onHit()
-{
-    if (!isExploding)
+
+void Alien::animateExplosion() {
+    if (clock.getElapsedTime().asMilliseconds() > 100)
     {
-        std::cout << "Here\n";
-        isExploding = true;
-        explosionSprite.setPosition(sprite.getPosition());
-        explosionSprite.animate();
-    }
-}
-
-
-void Alien::update()
-{
-    if (isExploding) {
-        explosionSprite.animate();
-        if (explosionSprite.getGlobalBounds().width <= 0) {
-            // Reset to initial state after the explosion is complete
-            isExploding = false;
-            explosionSprite.reset();
+        if (explosionIntRect.left + explosionIntRect.width >= width)
+        {
+            explosionIntRect.left = 0;
+            explosionIntRect.top += explosionIntRect.height;
+            if (explosionIntRect.top + explosionIntRect.height >= height)
+            {
+                explosionIntRect.top = 0;
+            }
         }
+        else
+        {
+            explosionIntRect.left += explosionIntRect.width;
+        }
+        clock.restart();
+
+        // Use the explosion sprite's setTextureRect instead of FighterJet's setTextureRect
+        explosionSprite.setTextureRect(explosionIntRect);
     }
 }
 
+void Alien::setupExplosionIntRect(int rows, int cols) {
+    explosionIntRect.width = width / cols;
+    explosionIntRect.height = height / rows;
 
-void Alien::updateExplosionAnimation() {
-    explosionSprite.animate();
+    explosionIntRect.left = 0;
+    explosionIntRect.top = 0;
+    explosionSprite.setTextureRect(explosionIntRect);
 }
 
-bool Alien::isExplosionComplete() {
-    return explosionSprite.isExplosionComplete();
+void Alien::setupAlien(sf::Texture &texture, int rows, int cols) {
+    sf::IntRect intRect;
+
+    intRect.width = texture.getSize().x;
+    intRect.height = texture.getSize().y;
+
+    sprite.setTexture(texture);
+    sprite.setTextureRect(intRect);
+
+    sprite.setScale(0.009, 0.009);
 }
 
-void Alien::reset() {
-    explosionSprite.reset();
+void Alien::setup(sf::Texture &texture, int rows, int cols) {
+    width = texture.getSize().x;
+    height = texture.getSize().y;
+    explosionSprite.setTexture(texture);
+    setupExplosionIntRect(rows, cols);
 }
-

@@ -16,7 +16,7 @@ void Gun::shoot(FighterJet& jet, Background& background, AlienShip& alienShip)
         // Create new rocket
         Rocket newRocket;
         newRocket.setSize({5, 9});
-        Position::aboveAndMiddle(jet.getSprite(), newRocket.getRocket());
+        Position::aboveAndMiddle(jet.getJetSprite(), newRocket.getRocket());
         rockets.push_back(newRocket);
         clock.restart();
     }
@@ -30,7 +30,7 @@ void Gun::shoot(FighterJet& jet, Background& background, AlienShip& alienShip)
         {
 
             // Check collision between jet and alien ship
-            if (HitBox::isHit(jet.getSprite(), alienIt->getSprite()))
+            if (HitBox::isHit(jet.getJetSprite(), alienIt->getSprite()))
             {
                 // Handle collision
                 jet.enableState(HIT);
@@ -42,10 +42,10 @@ void Gun::shoot(FighterJet& jet, Background& background, AlienShip& alienShip)
             if (HitBox::isHit(rocketIt->getRocket(), alienIt->getSprite()))
             {
                 // Handle collision
-//                animate();
+                alienIt->enableState(HIT);
+
                 rocketIt = rockets.erase(rocketIt);
                 rocketRemoved = true;
-                alienIt = alienShip.getAliens().erase(alienIt);
                 break; // Break the inner loop since the rocket is removed
             }
             else

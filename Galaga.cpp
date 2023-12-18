@@ -14,7 +14,9 @@ Galaga::Galaga(sf::RenderWindow& window)
 {
 
     Position::centerWithWindow(window, background.getSprite());
-    Position::alignCenter(background.getSprite(), fighterJet.getSprite(), 0, 200);
+    Position::alignCenter(background.getSprite(), fighterJet.getJetSprite(), 0, 200);
+    Position::alignCenter(background.getSprite(), fighterJet.getExplosionSprite(), 0, 200);
+
 
     display.setSize({80, 60});
     display.setCharacterSize(15);
@@ -31,23 +33,11 @@ Galaga::Galaga(sf::RenderWindow& window)
 void Galaga::draw(sf::RenderTarget &window, sf::RenderStates states) const
 {
 
-    if (fighterJet.getState(HIT))
-    {
-        window.draw(background);
-        window.draw(alienShip);
-        window.draw(gun);
-        window.draw(display);
-        window.draw(animatedSprite);
-    }
-    else
-    {
         window.draw(background);
         window.draw(fighterJet);
         window.draw(alienShip);
         window.draw(gun);
         window.draw(display);
-    }
-
 
 }
 
@@ -78,8 +68,7 @@ void Galaga::update(sf::RenderWindow &window, sf::Event event)
     }
     else
     {
-        animatedSprite.animate();
-        std::cout << "here\n";
+        fighterJet.animateExplosion();
     }
 }
 

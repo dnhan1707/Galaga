@@ -12,7 +12,7 @@
 #include "AnimatedSprite.h"
 #include "Image.h"
 
-class AlienShip : public sf::Drawable
+class AlienShip : public sf::Drawable, public States
 {
 
 private:
@@ -25,7 +25,6 @@ public:
     std::vector<Alien>& getAliens();
     void move();  // Add a move method for AlienShip
     virtual void draw(sf::RenderTarget& window, sf::RenderStates states) const;
-
 };
 
 

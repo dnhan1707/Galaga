@@ -13,8 +13,14 @@ void AlienShip::update()
 {
     for (auto& alien : aliens)
     {
-        alien.bounce();
-        // Handle collisions or other events if needed
+        if (!alien.getState(HIT))
+        {
+            alien.bounce();
+        }
+        else
+        {
+            alien.animateExplosion();
+        }
     }
 }
 
@@ -41,3 +47,4 @@ std::vector<Alien>& AlienShip::getAliens()
 {
     return aliens;
 }
+

@@ -32,12 +32,22 @@ Galaga::Galaga(sf::RenderWindow& window)
 
 void Galaga::draw(sf::RenderTarget &window, sf::RenderStates states) const
 {
-
+    if (alienShip.getState(DONE_ANIMATING))
+    {
+        window.draw(background);
+        window.draw(fighterJet);
+        window.draw(gun);
+        window.draw(display);
+    }
+    else
+    {
         window.draw(background);
         window.draw(fighterJet);
         window.draw(alienShip);
         window.draw(gun);
         window.draw(display);
+
+    }
 
 }
 

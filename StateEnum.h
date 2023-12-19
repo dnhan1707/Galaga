@@ -7,7 +7,7 @@
 
 
 enum StateEnum {
-    HIDDEN, HIT, FIRE, FIRED, CLICK, LOSE, RESTART,
+    HIDDEN, HIT, FIRE, FIRED, CLICK, LOSE, RESTART, DONE_ANIMATING,
 
     /// Do not add state below this line
     LAST_STATE

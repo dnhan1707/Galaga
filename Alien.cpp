@@ -20,9 +20,10 @@ Alien::Alien(sf::Texture& alienTexture, sf::Texture& explosionTexture)
 }
 
 void Alien::draw(sf::RenderTarget &window, sf::RenderStates states) const {
-    if (getState(HIT)) {
+    if (getState(HIT) && !getState(DONE_ANIMATING)) {
         window.draw(explosionSprite);
-    } else {
+    }
+    else {
         window.draw(sprite);
     }
 }
@@ -101,16 +102,19 @@ void Alien::animateExplosion() {
             if (explosionIntRect.top + explosionIntRect.height >= height)
             {
                 explosionIntRect.top = 0;
+                enableState(DONE_ANIMATING);
+                std::cout << "Here\n";
             }
         }
         else
         {
             explosionIntRect.left += explosionIntRect.width;
-        }
-        clock.restart();
+            clock.restart();
 
-        // Use the explosion sprite's setTextureRect instead of FighterJet's setTextureRect
-        explosionSprite.setTextureRect(explosionIntRect);
+            explosionSprite.setScale(0.5, 0.5);
+            explosionSprite.setTextureRect(explosionIntRect);
+        }
+
     }
 }
 
@@ -139,5 +143,15 @@ void Alien::setup(sf::Texture &texture, int rows, int cols) {
     width = texture.getSize().x;
     height = texture.getSize().y;
     explosionSprite.setTexture(texture);
+
     setupExplosionIntRect(rows, cols);
 }
+
+bool Alien::isExplosionComplete() const {
+    return (explosionIntRect.left + explosionIntRect.width >= width) &&
+           (explosionIntRect.top + explosionIntRect.height >= height);
+}
+
+
+
+

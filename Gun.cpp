@@ -43,7 +43,6 @@ void Gun::shoot(FighterJet& jet, Background& background, AlienShip& alienShip)
             {
                 // Handle collision
                 alienIt->enableState(HIT);
-
                 rocketIt = rockets.erase(rocketIt);
                 rocketRemoved = true;
                 break; // Break the inner loop since the rocket is removed

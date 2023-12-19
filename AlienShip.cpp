@@ -9,20 +9,22 @@ AlienShip::AlienShip()
 
 }
 
-void AlienShip::update()
-{
-    for (auto& alien : aliens)
-    {
-        if (!alien.getState(HIT))
-        {
+void AlienShip::update() {
+    auto removeIter = std::remove_if(aliens.begin(), aliens.end(), [](const Alien& alien) {
+        return alien.getState(DONE_ANIMATING);
+    });
+
+    aliens.erase(removeIter, aliens.end());
+
+    for (auto& alien : aliens) {
+        if (!alien.getState(HIT) && !alien.getState(DONE_ANIMATING)) {
             alien.bounce();
-        }
-        else
-        {
+        } else if (!alien.getState(DONE_ANIMATING)) {
             alien.animateExplosion();
         }
     }
 }
+
 
 
 void AlienShip::addAlien()

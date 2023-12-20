@@ -21,38 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3dc2985b-7fdb-4337-b9d5-a6c89cd72203" name="Changes" comment="Updated the animation">
-      <change afterPath="$PROJECT_DIR$/StartGame.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StartGame.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alien.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alien.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Display.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Display.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FighterJet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/FighterJet.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Galaga.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Galaga.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Galaga.h" beforeDir="false" afterPath="$PROJECT_DIR$/Galaga.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameOver.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOver.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameOver.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gun.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Gun.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gun.h" beforeDir="false" afterPath="$PROJECT_DIR$/Gun.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StateEnum.h" beforeDir="false" afterPath="$PROJECT_DIR$/StateEnum.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-e82723b9744c405d1858.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-analog_digital_clock-Debug-aa037e794d6d79f21abb.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Alien.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Alien.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/AlienShip.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/AlienShip.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Button.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Button.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Display.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Display.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/FighterJet.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/FighterJet.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Galaga.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Galaga.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/GameOver.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/GameOver.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Gun.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Gun.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Rocket.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Rocket.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/States.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/States.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/analog_digital_clock.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/analog_digital_clock.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,11 +35,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -119,11 +88,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="analog_digital_clock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="analog_digital_clock" TARGET_NAME="analog_digital_clock" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="analog_digital_clock" RUN_TARGET_NAME="analog_digital_clock">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -196,7 +160,8 @@
       <workItem from="1702856145558" duration="16486000" />
       <workItem from="1702949855501" duration="9995000" />
       <workItem from="1703021205658" duration="8468000" />
-      <workItem from="1703037836940" duration="6962000" />
+      <workItem from="1703037836940" duration="6972000" />
+      <workItem from="1703100657621" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1702424032304</created>
@@ -226,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702967511319</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Updated the animation">
+      <created>1703054754331</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703054754331</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

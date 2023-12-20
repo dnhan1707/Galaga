@@ -103,6 +103,7 @@ std::string Display::getElapsedTimeAsString() {
     // Format elapsed time as a string (minutes:seconds)
     int minutes = static_cast<int>(elapsedSeconds) / 60;
     int seconds = static_cast<int>(elapsedSeconds) % 60;
+    std::cout << "Counting\n";
 
     return "Time: " + std::to_string(minutes) + ":" + (seconds < 10 ? "0" : "") + std::to_string(seconds);
 }

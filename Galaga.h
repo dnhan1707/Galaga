@@ -17,6 +17,7 @@
 #include "Display.h"
 #include "AnimatedSprite.h"
 #include "GameOver.h"
+#include "StartGame.h"
 
 class Galaga : public sf::Drawable, public States
 {
@@ -30,6 +31,7 @@ private:
     AlienShip alienShip;
     Gun gun;
     GameOver gameOver;
+    StartGame startGame;
 
     AnimatedSprite animatedSprite;
 

@@ -103,7 +103,6 @@ void Alien::animateExplosion() {
             {
                 explosionIntRect.top = 0;
                 enableState(DONE_ANIMATING);
-                std::cout << "Here\n";
             }
         }
         else

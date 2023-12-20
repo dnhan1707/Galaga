@@ -21,13 +21,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3dc2985b-7fdb-4337-b9d5-a6c89cd72203" name="Changes" comment="Updated the animation">
+      <change afterPath="$PROJECT_DIR$/StartGame.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StartGame.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alien.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alien.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alien.h" beforeDir="false" afterPath="$PROJECT_DIR$/Alien.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlienShip.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/AlienShip.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Display.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Display.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FighterJet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/FighterJet.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Galaga.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Galaga.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Galaga.h" beforeDir="false" afterPath="$PROJECT_DIR$/Galaga.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameOver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameOver.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameOver.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameOver.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gun.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Gun.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gun.h" beforeDir="false" afterPath="$PROJECT_DIR$/Gun.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StateEnum.h" beforeDir="false" afterPath="$PROJECT_DIR$/StateEnum.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-e82723b9744c405d1858.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-analog_digital_clock-Debug-aa037e794d6d79f21abb.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Alien.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Alien.cpp.obj" afterDir="false" />
@@ -43,6 +52,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/analog_digital_clock.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/analog_digital_clock.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +65,19 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="38db88b5-d064-4e42-a0ae-d2d51e6f91e6" />
+        <option name="url" value="https://github.com/dnhan1707/Galaga.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -69,23 +92,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/ASUS/CLionProjects/CS002A/SO-Angry",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "CPPToolchains",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ASUS/CLionProjects/CS003A/Galaga&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CPPToolchains&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ASUS\CLionProjects\CS003A\Galaga" />
@@ -96,6 +119,11 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="analog_digital_clock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="analog_digital_clock" TARGET_NAME="analog_digital_clock" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="analog_digital_clock" RUN_TARGET_NAME="analog_digital_clock">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -166,7 +194,9 @@
       <workItem from="1702672777466" duration="3565000" />
       <workItem from="1702746058834" duration="1683000" />
       <workItem from="1702856145558" duration="16486000" />
-      <workItem from="1702949855501" duration="9972000" />
+      <workItem from="1702949855501" duration="9995000" />
+      <workItem from="1703021205658" duration="8468000" />
+      <workItem from="1703037836940" duration="6962000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1702424032304</created>
@@ -189,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702882156112</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated the animation">
+      <created>1702967511319</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702967511319</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

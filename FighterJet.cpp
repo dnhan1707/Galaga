@@ -55,6 +55,7 @@ void FighterJet::animateExplosion()
             if (explosionIntRect.top + explosionIntRect.height >= height)
             {
                 explosionIntRect.top = 0;
+                enableState(LOSE);
             }
         }
         else

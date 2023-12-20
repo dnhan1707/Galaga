@@ -27,7 +27,7 @@ public:
     sf::RectangleShape& getGameOverBackground();
     void update();
     void setPosition(sf::RectangleShape& background);
-    void eventHandler(sf::RenderWindow &window);
+    void eventHandler(sf::RenderWindow &window, sf::Event event);
 };
 
 

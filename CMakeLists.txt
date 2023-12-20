@@ -6,7 +6,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -static")
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(SOURCE_FILES main.cpp Image.cpp Image.h Background.cpp Background.h Position.h Position.cpp StateEnum.h States.cpp Font.cpp FighterJet.cpp FighterJet.h Galaga.cpp Galaga.h Rocket.cpp Rocket.h Rocket.h Gun.cpp Gun.h Alien.cpp Alien.h HitBox.cpp HitBox.h AlienShip.cpp AlienShip.h AnimatedSprite.cpp AnimatedSprite.h Display.cpp GameOver.cpp GameOver.h Button.cpp Score.cpp Score.h)
+set(SOURCE_FILES main.cpp Image.cpp Image.h Background.cpp Background.h Position.h Position.cpp StateEnum.h States.cpp Font.cpp FighterJet.cpp FighterJet.h Galaga.cpp Galaga.h Rocket.cpp Rocket.h Rocket.h Gun.cpp Gun.h Alien.cpp Alien.h HitBox.cpp HitBox.h AlienShip.cpp AlienShip.h AnimatedSprite.cpp AnimatedSprite.h Display.cpp GameOver.cpp GameOver.h Button.cpp Score.cpp Score.h StartGame.cpp StartGame.h)
 
 if (CMAKE_BUILD_TYPE STREQUAL "Release")
     add_executable(${PROJECT_NAME} WIN32 ${SOURCE_FILES})

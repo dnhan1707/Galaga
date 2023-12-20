@@ -38,6 +38,7 @@ GameOver::GameOver(sf::Vector2f screenSize, sf::Font &font)
 
     button.setRadius(50.f);
     button.setUpText("Restart", font);
+
 }
 
 void GameOver::draw(sf::RenderTarget &window, sf::RenderStates states) const {
@@ -55,13 +56,6 @@ sf::RectangleShape &GameOver::getGameOverBackground() {
     return background;
 }
 
-void GameOver::update() {
-    if (getState(LOSE))
-    {
-
-    }
-}
-
 void GameOver::setPosition(sf::RectangleShape& background)
 {
 //    longestSurvivalText.setPosition(screenSize.x / 2 - longestSurvivalText.getGlobalBounds().width / 2, screenSize.y / 2);
@@ -70,8 +64,14 @@ void GameOver::setPosition(sf::RectangleShape& background)
     Position::alignCenter(background, button.getButton(), 0, 50);
 }
 
-void GameOver::eventHandler(sf::RenderWindow &window) {
-    if (MouseEvents::isCLicked(button.getButton(), window))
+void GameOver::eventHandler(sf::RenderWindow& window, sf::Event event)
+{
+    button.eventHandler(window, event);
+}
+
+void GameOver::update() {
+    button.update();
+    if (button.getState(CLICK))
     {
         enableState(RESTART);
     }

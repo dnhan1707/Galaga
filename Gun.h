@@ -28,7 +28,6 @@ public:
     void shoot(FighterJet& jet, Background& background, AlienShip& alienShip);
     std::vector<Rocket>& getRocketsVector();
     virtual void draw(sf::RenderTarget& window, sf::RenderStates states) const;
-    void update(AlienShip& alienShip);
 
 };
 

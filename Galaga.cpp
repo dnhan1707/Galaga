@@ -24,31 +24,35 @@ Galaga::Galaga(sf::RenderWindow& window)
     Position::alignLeft(background.getSprite(), display);
 
     alienShip.addAlien();
+//    Position::alignCenter(background.getSprite(), startGame.getStartGameBackground(), 0, 0);
 
     Position::alignCenter(background.getSprite(), gameOver.getGameOverBackground(), 0, 0);
+//    startGame.setPosition(startGame.getStartGameBackground());
     gameOver.setPosition(gameOver.getGameOverBackground());
-//    gameOver.setPosition(background);
+
 }
 
 void Galaga::draw(sf::RenderTarget &window, sf::RenderStates states) const
 {
-    if (alienShip.getState(DONE_ANIMATING))
-    {
-        window.draw(background);
-        window.draw(fighterJet);
-        window.draw(gun);
-        window.draw(display);
-    }
-    else
-    {
+//    if (!startGame.getState(START))
+//    {
+//        window.draw(startGame);
+//    }
+//
+//    else if (startGame.getState(START))
+//    {
         window.draw(background);
         window.draw(fighterJet);
         window.draw(alienShip);
         window.draw(gun);
         window.draw(display);
+//    }
 
+
+    if (fighterJet.getState(LOSE))
+    {
+        window.draw(gameOver);
     }
-
 }
 
 void Galaga::update(sf::RenderWindow &window, sf::Event event)
@@ -72,6 +76,7 @@ void Galaga::update(sf::RenderWindow &window, sf::Event event)
         {
             fighterJet.move({5, 0});
         }
+
         alienShip.update();
         gun.shoot(fighterJet, background, alienShip);
         display.update();
@@ -80,9 +85,13 @@ void Galaga::update(sf::RenderWindow &window, sf::Event event)
     {
         fighterJet.animateExplosion();
     }
+
+    gameOver.update();
+
 }
 
 void Galaga::eventHandler(sf::RenderWindow &window, sf::Event event)
 {
-
+//    startGame.eventHandler(window,event);
+    gameOver.eventHandler(window, event);
 }

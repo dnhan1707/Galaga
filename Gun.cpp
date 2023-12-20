@@ -64,7 +64,7 @@ void Gun::shoot(FighterJet& jet, Background& background, AlienShip& alienShip)
                 }
                 else
                 {
-                    rocketIt->move({0, -1});
+                    rocketIt->move({0, -5});
                     ++rocketIt;
                 }
             }

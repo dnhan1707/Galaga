@@ -69,11 +69,12 @@ void GameOver::eventHandler(sf::RenderWindow& window, sf::Event event)
     button.eventHandler(window, event);
 }
 
-void GameOver::update() {
+void GameOver::update(FighterJet& fighterJet) {
     button.update();
     if (button.getState(CLICK))
     {
         enableState(RESTART);
+        fighterJet.disableState(LOSE);
     }
 }
 

@@ -24,40 +24,56 @@ Galaga::Galaga(sf::RenderWindow& window)
     Position::alignLeft(background.getSprite(), display);
 
     alienShip.addAlien();
-//    Position::alignCenter(background.getSprite(), startGame.getStartGameBackground(), 0, 0);
+
+    Position::alignCenter(background.getSprite(), startGameWindow.getStartGameBackground(), 0, 0);
+    startGameWindow.setPosition(startGameWindow.getStartGameBackground());
+
 
     Position::alignCenter(background.getSprite(), gameOver.getGameOverBackground(), 0, 0);
-//    startGame.setPosition(startGame.getStartGameBackground());
     gameOver.setPosition(gameOver.getGameOverBackground());
 
 }
 
 void Galaga::draw(sf::RenderTarget &window, sf::RenderStates states) const
 {
-//    if (!startGame.getState(START))
-//    {
-//        window.draw(startGame);
-//    }
-//
-//    else if (startGame.getState(START))
-//    {
+    if (!isOver && start)
+    {
         window.draw(background);
         window.draw(fighterJet);
         window.draw(alienShip);
         window.draw(gun);
         window.draw(display);
-//    }
-
-
-    if (fighterJet.getState(LOSE))
-    {
-        window.draw(gameOver);
     }
+
+
+
+    if (fighterJet.getState(LOSE)) {
+        window.draw(gameOver);
+        isOver = true;
+    }
+
+    if (!start)
+    {
+        std::cout << "here\n";
+        window.draw(startGameWindow);
+    }
+
 }
 
 void Galaga::update(sf::RenderWindow &window, sf::Event event)
 {
-    if (!fighterJet.getState(HIT))
+    if (!startGameWindow.getState(START))
+    {
+        enableStartWindow();
+        startGameWindow.disableState(START);
+    }
+
+    if (gameOver.getState(RESTART)) {
+        resetGame();
+        gameOver.disableState(RESTART);
+    }
+
+    if (!fighterJet.getState(HIT) && start)
     {
         // Update game logic, e.g., movement
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
@@ -86,12 +102,31 @@ void Galaga::update(sf::RenderWindow &window, sf::Event event)
         fighterJet.animateExplosion();
     }
 
-    gameOver.update();
+    gameOver.update(fighterJet);
 
 }
 
 void Galaga::eventHandler(sf::RenderWindow &window, sf::Event event)
 {
-//    startGame.eventHandler(window,event);
+    startGameWindow.eventHandler(window, event);
+    if (startGameWindow.getState(START))
+    {
+        start = true;
+    }
     gameOver.eventHandler(window, event);
+}
+
+void Galaga::resetGame() {
+    fighterJet.reset(background);
+    alienShip.reset();
+
+    clock.restart();
+    isOver = false;
+    gameOver.disableState(GAME_OVER_STATE);
+
+}
+
+void Galaga::enableStartWindow()
+{
+    start = false;
 }

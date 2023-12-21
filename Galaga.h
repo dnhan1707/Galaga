@@ -31,11 +31,12 @@ private:
     AlienShip alienShip;
     Gun gun;
     GameOver gameOver;
-    StartGame startGame;
+    StartGame startGameWindow;
 
     AnimatedSprite animatedSprite;
 
-    bool isOver = false;
+    mutable bool isOver = false;
+    mutable bool start;
 public:
     Galaga();
     Galaga(sf::RenderWindow& window);
@@ -44,7 +45,8 @@ public:
     void update(sf::RenderWindow& window, sf::Event event);
 
     void eventHandler(sf::RenderWindow &window, sf::Event event);
-
+    void resetGame();
+    void enableStartWindow();
 };
 
 

@@ -47,7 +47,7 @@ public:
     void setupAlien(sf::Texture &texture, int rows, int cols);
     void animateExplosion();
     bool isExplosionComplete() const;
-
+    void reset();
 };
 
 #endif //SFML_PROJECT_ALIEN_H

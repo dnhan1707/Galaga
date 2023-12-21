@@ -39,11 +39,7 @@ sf::RectangleShape &StartGame::getStartGameBackground() {
 
 void StartGame::update() {
     button.update();
-    if (button.getState(CLICK))
-    {
-        std::cout << "Here\n";
-        enableState(START);
-    }
+
 }
 
 void StartGame::setPosition(sf::RectangleShape &background) {
@@ -53,4 +49,9 @@ void StartGame::setPosition(sf::RectangleShape &background) {
 
 void StartGame::eventHandler(sf::RenderWindow &window, sf::Event event) {
     button.eventHandler(window, event);
+    if (button.getState(CLICK))
+    {
+        std::cout << "Here\n";
+        enableState(START);
+    }
 }

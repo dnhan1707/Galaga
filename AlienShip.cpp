@@ -50,3 +50,16 @@ std::vector<Alien>& AlienShip::getAliens()
     return aliens;
 }
 
+void AlienShip::reset()
+{
+    aliens = {};
+    addAlien();
+    for (auto& alien : aliens)
+    {
+        alien.reset();  // Call reset for each alien
+    }
+
+
+}
+
+

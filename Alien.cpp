@@ -151,6 +151,12 @@ bool Alien::isExplosionComplete() const {
            (explosionIntRect.top + explosionIntRect.height >= height);
 }
 
+void Alien::reset() {
+    clock.restart();
+    firstMove = true;
+    disableState(DONE_ANIMATING);
+}
+
 
 
 

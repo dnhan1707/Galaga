@@ -102,3 +102,12 @@ void FighterJet::setupJet(sf::Texture &texture, int rows, int cols)
 
 }
 
+void FighterJet::reset(Background& background)
+{
+    disableState(HIT);
+    disableState(LOSE);
+
+    Position::alignCenter(background.getSprite(), getJetSprite(), 0, 200);
+    Position::alignCenter(background.getSprite(), getExplosionSprite(), 0, 200);
+}
+

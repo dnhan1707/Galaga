@@ -32,11 +32,12 @@ public:
     sf::Sprite& getExplosionSprite();
     void move(sf::Vector2f velocity);
 
+    void setPosition();
     sf::Vector2f getPosition();
     void animateExplosion();
     void setupExplosionIntRect(int rows, int cols);
     void setupJet(sf::Texture &texture, int rows, int cols);
-
+    void reset(Background& background);
 };
 
 #endif //SFML_PROJECT_FIGHTERJET_H

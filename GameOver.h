@@ -10,6 +10,7 @@
 #include "Button.h"
 #include "Background.h"
 #include "States.h"
+#include "FighterJet.h"
 
 class GameOver : public sf::Drawable, public States
 {
@@ -25,7 +26,7 @@ public:
     virtual void draw(sf::RenderTarget& window, sf::RenderStates states) const;
     void setLongestSurvivalTime(const std::string& time);
     sf::RectangleShape& getGameOverBackground();
-    void update();
+    void update(FighterJet& fighterJet);
     void setPosition(sf::RectangleShape& background);
     void eventHandler(sf::RenderWindow &window, sf::Event event);
 };

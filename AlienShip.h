@@ -25,6 +25,7 @@ public:
     std::vector<Alien>& getAliens();
     void move();  // Add a move method for AlienShip
     virtual void draw(sf::RenderTarget& window, sf::RenderStates states) const;
+    void reset();
 };
 
 

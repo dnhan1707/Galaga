@@ -58,8 +58,6 @@ sf::RectangleShape &GameOver::getGameOverBackground() {
 
 void GameOver::setPosition(sf::RectangleShape& background)
 {
-//    longestSurvivalText.setPosition(screenSize.x / 2 - longestSurvivalText.getGlobalBounds().width / 2, screenSize.y / 2);
-//    restartText.setPosition(screenSize.x / 2 - restartText.getGlobalBounds().width / 2, 3 * screenSize.y / 4);
     Position::alignCenter(background, gameOverText, 0, -50);
     Position::alignCenter(background, button.getButton(), 0, 50);
 }

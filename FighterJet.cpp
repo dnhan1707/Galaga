@@ -56,6 +56,7 @@ void FighterJet::animateExplosion()
             {
                 explosionIntRect.top = 0;
                 enableState(LOSE);
+                disableState(HIT);
             }
         }
         else

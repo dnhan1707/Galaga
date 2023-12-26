@@ -18,6 +18,7 @@
 #include "AnimatedSprite.h"
 #include "GameOver.h"
 #include "StartGame.h"
+//#include "Life.h"
 
 class Galaga : public sf::Drawable, public States
 {
@@ -34,6 +35,8 @@ private:
     StartGame startGameWindow;
 
     AnimatedSprite animatedSprite;
+
+//    Life life;
 
     mutable bool isOver = false;
     mutable bool start;

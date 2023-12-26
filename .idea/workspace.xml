@@ -21,18 +21,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3dc2985b-7fdb-4337-b9d5-a6c89cd72203" name="Changes" comment="Updated the animation">
+      <change afterPath="$PROJECT_DIR$/Life.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Life.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alien.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Alien.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alien.h" beforeDir="false" afterPath="$PROJECT_DIR$/Alien.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlienShip.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/AlienShip.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlienShip.h" beforeDir="false" afterPath="$PROJECT_DIR$/AlienShip.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FighterJet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/FighterJet.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FighterJet.h" beforeDir="false" afterPath="$PROJECT_DIR$/FighterJet.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Galaga.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Galaga.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Galaga.h" beforeDir="false" afterPath="$PROJECT_DIR$/Galaga.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameOver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameOver.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOver.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameOver.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StartGame.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/StartGame.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gun.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Gun.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gun.h" beforeDir="false" afterPath="$PROJECT_DIR$/Gun.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Position.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Position.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Position.h" beforeDir="false" afterPath="$PROJECT_DIR$/Position.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StateEnum.h" beforeDir="false" afterPath="$PROJECT_DIR$/StateEnum.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
@@ -44,11 +44,13 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Galaga.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Galaga.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/GameOver.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/GameOver.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Gun.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Gun.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Position.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Position.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Rocket.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/Rocket.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/States.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/States.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/analog_digital_clock.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/analog_digital_clock.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/analog_digital_clock.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,23 +90,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ASUS/CLionProjects/CS003A/Galaga&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CPPToolchains&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "C:/Users/ASUS/CLionProjects/CS003A/Calculator",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "CPPToolchains",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ASUS\CLionProjects\CS003A\Galaga" />
@@ -188,7 +190,11 @@
       <workItem from="1702949855501" duration="9995000" />
       <workItem from="1703021205658" duration="8468000" />
       <workItem from="1703037836940" duration="6972000" />
-      <workItem from="1703100657621" duration="9175000" />
+      <workItem from="1703100657621" duration="9777000" />
+      <workItem from="1703203378247" duration="13514000" />
+      <workItem from="1703300192606" duration="334000" />
+      <workItem from="1703301333167" duration="594000" />
+      <workItem from="1703628095076" duration="2774000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1702424032304</created>
@@ -232,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703100719876</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated the animation">
+      <created>1703117399074</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1703117399074</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

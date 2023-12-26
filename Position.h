@@ -51,6 +51,8 @@ public:
     template<typename T, typename S>
     static void centerWithWindow(const T &constObj, S &obj, float spacing = 5);
 
+    template<typename T, typename S>
+    static void leftBelowCorner(const T &constObj, S &obj, float spacing = 0);
 };
 
 

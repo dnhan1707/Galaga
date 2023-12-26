@@ -154,4 +154,18 @@ void Position::centerWithWindow(const T &constObj, S &obj, float spacing)
     obj.setPosition({x,y});
 }
 
+
+template<typename T, typename S>
+void Position::leftBelowCorner(const T &constObj, S &obj, float spacing)
+{
+    sf::FloatRect constBounce = constObj.getGlobalBounds();
+    sf::FloatRect objectBounce = obj.getGlobalBounds();
+
+    float x = 0;
+    float y = constBounce.width - objectBounce.width;
+
+    obj.setPosition({x, y});
+}
+
+
 #endif

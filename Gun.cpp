@@ -87,3 +87,8 @@ void Gun::draw(sf::RenderTarget &window, sf::RenderStates states) const {
 
 }
 
+void Gun::reset() {
+    rockets = {};
+    clock.restart();
+}
+

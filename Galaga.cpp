@@ -69,7 +69,8 @@ void Galaga::update(sf::RenderWindow &window, sf::Event event)
 //        startGameWindow.disableState(START);
     }
 
-    if (gameOver.getState(RESTART)) {
+    if (gameOver.getState(RESTART))
+    {
         resetGame();
         gameOver.disableState(RESTART);
     }
@@ -101,13 +102,14 @@ void Galaga::update(sf::RenderWindow &window, sf::Event event)
     else
     {
         fighterJet.animateExplosion();
+        gameOver.update(fighterJet);
+
 //        life.decreaseLife();
 //        if (life.getState(OUT_OF_LIFE))
 //        {
 //            gameOver.update(fighterJet);
 //        }
     }
-    gameOver.update(fighterJet);
 
 //    life.update();
 
@@ -123,7 +125,7 @@ void Galaga::eventHandler(sf::RenderWindow &window, sf::Event event)
 
 //    if (life.getState(OUT_OF_LIFE))
 //    {
-        gameOver.update(fighterJet);
+        gameOver.eventHandler(window, event);
 //    }
 }
 

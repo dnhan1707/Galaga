@@ -20,7 +20,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3dc2985b-7fdb-4337-b9d5-a6c89cd72203" name="Changes" comment="Updated the animation">
+    <list default="true" id="3dc2985b-7fdb-4337-b9d5-a6c89cd72203" name="Changes" comment="Updated the restart">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Galaga.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Galaga.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
@@ -173,7 +173,7 @@
       <workItem from="1703300192606" duration="334000" />
       <workItem from="1703301333167" duration="594000" />
       <workItem from="1703628095076" duration="3894000" />
-      <workItem from="1703883377040" duration="1193000" />
+      <workItem from="1703883377040" duration="1211000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1702424032304</created>
@@ -231,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703630923880</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updated the restart">
+      <created>1703884609224</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1703884609224</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +247,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated" />
     <MESSAGE value="Updated the animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated the animation" />
+    <MESSAGE value="Updated the restart" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated the restart" />
   </component>
 </project>
